@@ -49,6 +49,7 @@ export class VehiclesComponent {
   update(vehicle:Vehicle) {
     this.http.put(this.baseUrl+'api/vehicles/'+vehicle.id,vehicle).subscribe(() => {
       this.refresh();
+      location.replace("https://localhost:5001/vehicles");
     }, error => console.error(error));
   }
 
